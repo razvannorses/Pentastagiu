@@ -95,3 +95,5 @@ echo "<br/>";
 echo "The sum of the numbers divisible by five.<br/>";
 
 sumBy($display_numbers,5);
+
+echo "new line";
