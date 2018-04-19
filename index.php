@@ -87,12 +87,12 @@ echo "The list of numbers divisible with three:<br/>";
 
 divideBy($display_numbers,3);
 
-echo "The number of the numbers divisible by four:<br/>";
+echo "The number of the numbers divisible with four:<br/>";
 
 numberBy($display_numbers,4);
 echo "<br/>";
 
 echo "The sum of the numbers divisible by five.<br/>";
 
-sumBy($display_numbers,5);
+sumBy($display_numbers,23);
 ?>
