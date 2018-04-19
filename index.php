@@ -83,7 +83,7 @@ var_dump($data);
 
 $display_numbers=array_slice(range($first+1,$last-1),0,$nr_iteration);
 var_dump($display_numbers);
-echo "The list of numbers divisible by three:<br/>";
+echo "The list of numbers divisible with three:<br/>";
 
 divideBy($display_numbers,3);
 
