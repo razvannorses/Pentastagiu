@@ -57,42 +57,29 @@ if (!$_POST) {
 include 'display_divisible_numbers.php';
 include 'number_of_numbers.php';
 include 'sum_numbers.php';
-
-
-
+include 'Divisibility.php';
+include 'Exception.php';
 
 
 $first=$_POST['startPoint'];
 $last=$_POST['endPoint'];
 $nr_iteration=$_POST['iterations'];
 
-if($first<0 || $last<0 || $nr_iteration<=0){
-    echo "Enter the positive values";
-    exit;
-}elseif (isset($last) && $last<=$first){
-    echo "Last is small than first";
-    exit;
-}elseif (isset($nr_iteration) && $nr_iteration>count(range($first,$last))){
-    echo "The number of iteration is big than the chosen range ";
-    exit;
-}
-echo "<pre>";
-print_r($_POST);
-$data=range($first+1,$last-1);
-var_dump($data);
+    echo "<pre>";
+    print_r($_POST);
+    $data = range($first + 1, $last - 1);
+    var_dump($data);
 
-$display_numbers=array_slice(range($first+1,$last-1),0,$nr_iteration);
-var_dump($display_numbers);
-echo "The list of numbers divisible by three:<br/>";
+    $display_numbers = array_slice(range($first + 1, $last - 1), 0, $nr_iteration);
+    var_dump($display_numbers);
 
-divideBy($display_numbers,3);
 
-echo "The number of the numbers divisible by four:<br/>";
+    $var1 = new Number();
+    echo $var1->divideBy($display_numbers, 3) . "<br/>";
+    echo $var1->numberBy($display_numbers, 4) . "<br/>";
+    echo "<br/>";
+    echo $var1->sumBy($display_numbers, 5);
 
-numberBy($display_numbers,555);
-echo "<br/>";
+?>
 
-echo "The sum of the numbers divisible by five.<br/>";
 
-sumBy($display_numbers,5);
-echo "file";
