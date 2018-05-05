@@ -54,9 +54,6 @@ if (!$_POST) {
     exit;
 }
 
-include 'display_divisible_numbers.php';
-include 'number_of_numbers.php';
-include 'sum_numbers.php';
 include 'Divisibility.php';
 include 'Exception.php';
 
