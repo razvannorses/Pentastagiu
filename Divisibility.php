@@ -1,5 +1,5 @@
-
 <?php
+
 class Number
 {
     public function __construct()
@@ -12,26 +12,32 @@ class Number
 
         foreach ($array as $value) {
             if ($value % $divide == 0) {
-                echo $value."<br/>";
+                echo $value . "<br/>";
             }
         }
     }
 
-    public function numberBy($array, $divide) {
-         $count=0;
+    public function numberBy($array, $divide)
+    {
+        $count = 0;
         foreach ($array as $value) {
             if ($value % $divide == 0) {
                 $count++;
             }
-        }echo $count;
+        }
+        echo $count;
     }
-   public function sumBy($array, $divideBy) {
-        $sum=0;
+
+    public function sumBy($array, $divideBy)
+    {
+        $sum = 0;
         foreach ($array as $value) {
             if ($value % $divideBy == 0) {
-                $sum+=$value;
+                $sum += $value;
             }
-        }echo $sum;
+        }
+        echo $sum;
     }
 }
+
 ?>
